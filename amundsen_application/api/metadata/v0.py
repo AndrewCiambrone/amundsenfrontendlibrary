@@ -488,7 +488,11 @@ def get_bookmark() -> Response:
             if app.config['AUTH_USER_METHOD']:
                 user_id = app.config['AUTH_USER_METHOD'](app).user_id
             else:
-                raise Exception('AUTH_USER_METHOD is not configured')
+                all_bookmarks = {
+                    'table': [],
+                    'dashboard': []
+                }
+                return make_response(jsonify({'msg': "Not signed in", 'bookmarks': all_bookmarks}), 200)
 
         url = '{0}{1}/{2}/follow/'.format(app.config['METADATASERVICE_BASE'], USER_ENDPOINT, user_id)
 
