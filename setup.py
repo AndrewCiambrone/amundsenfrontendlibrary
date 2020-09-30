@@ -37,7 +37,7 @@ requirements_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'r
 with open(requirements_path) as requirements_file:
     requirements = requirements_file.readlines()
 
-__version__ = '2.2.0'
+__version__ = '2.3.0'
 
 
 setup(
@@ -52,7 +52,7 @@ setup(
     dependency_links=[],
     install_requires=requirements,
     extras_require={
-        'oidc': ['flaskoidc==0.0.2']
+        'oidc': ['flaskoidc==0.1.0']
     },
     python_requires=">=3.6",
     entry_points="""

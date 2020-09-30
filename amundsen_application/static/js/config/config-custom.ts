@@ -22,10 +22,11 @@ const configCustom: AppConfigCustom = {
   indexUsers: {
     enabled: false,
   },
-  userIdLabel: 'email address',
+  userIdLabel: 'User Name',
   issueTracking: {
     enabled: false,
   },
+  navLinks: [],
 };
 
 export default configCustom;
